@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gallery-info:rgb(255, 255, 255);
+}
+
+h1{
+    font-size: 20p;
+}
+
+/*La Galería*/
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 5px;
+  margin: 0 10px;
+}
+
+.gallery_item{
+    aspect-ratio: 4 / 4;
+    position: relative;
+    overflow: hidden;
+}
+.gallery_img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery_info{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--gallery-info);
+    padding: 10px;
+}
+
+/*
+.gallery_title{
+    
+}
+
+.gallery_year{
+    
+}
+
+*/
