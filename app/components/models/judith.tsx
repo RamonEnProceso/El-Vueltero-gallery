@@ -20,7 +20,7 @@ const JudithModel = () => {
 }
 
 const JudithCanvas = () =>{
-    return <div style={{ width: "100%", height: "700px" }} className="judithCanvas">
+    return <div style={{ width: "800px", height: "800px" }}>
     <Canvas camera={{ position: [0, 0, 60], fov: 1 }} 
     dpr={[1, 1.5]}
     gl={{ antialias: false, powerPreference: "low-power" }}

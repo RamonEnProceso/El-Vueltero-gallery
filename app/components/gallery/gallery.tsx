@@ -20,6 +20,10 @@ const chunkArray = (arr: artwork[], size:number) => {
     return newArr
 }
 
+const NameOverlay = ({text} : {text:string}) => {
+    return <div className="overlay"><div className="overlay_icon"></div><div className="overlay_name"><p>{text}</p></div></div>
+}
+
 const Gallery = async () =>{
 
     const gallerySliced= chunkArray(gallery,6);
@@ -30,6 +34,7 @@ const Gallery = async () =>{
                 return <div className="gallery_row" key={index}>
                     {part.map((artwork, index)=>{
                         return <div className="gallery_pictures" key={index}>
+                        <NameOverlay text={artwork.title}></NameOverlay>
                         <Image 
                         src={artwork.url} 
                         alt={artwork.title} 

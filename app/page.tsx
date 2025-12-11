@@ -1,12 +1,11 @@
 import Gallery from "./components/gallery/gallery";
-import JudithCanvas from "./components/models/judith";
+import Landing from "./components/section/landing/landing";
 
 export default function Home() {
   return (
     <div >
-      <main >
-        <h1>El vueltero Galería</h1>
-        <JudithCanvas></JudithCanvas>
+      <main>
+        <Landing></Landing>
         <Gallery></Gallery>
       </main>
     </div>
