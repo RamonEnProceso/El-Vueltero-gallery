@@ -25,7 +25,7 @@ const JudithCanvas = () =>{
     dpr={[1, 1.5]}
     gl={{ antialias: false, powerPreference: "low-power" }}
     shadows={false}>
-        <ambientLight intensity={2} />
+        <ambientLight intensity={1} />
         <directionalLight position={[5, 5, 5]} intensity={3.5} />
         <JudithModel></JudithModel>
     </Canvas>

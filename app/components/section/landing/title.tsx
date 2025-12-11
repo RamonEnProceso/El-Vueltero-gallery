@@ -9,7 +9,7 @@ const WordTitle = ({word, fontsArray}:{word:string, fontsArray:string[]}) =>{
     const interval = setInterval(() => {
       const num = Math.floor(Math.random() * fontsArray.length);
       setFont(fontsArray[num]);
-    }, 1500);
+    }, 800);
 
     return () => clearInterval(interval);
     }, [fontsArray]);

@@ -7,7 +7,7 @@ const Landing = () =>{
     return <section className="section_landing">
     <div className="landing">
         <h1>el vueltero&apos;s Gallery</h1>
-        <TitleLanding title={"El Vueltero"}></TitleLanding>
+        <TitleLanding title={"El vueltero"}></TitleLanding>
         <div>
 
         </div>
@@ -19,7 +19,13 @@ const Landing = () =>{
                 fill
                 alt=""
                 ></Image>
-            </div>
+        </div>
+        <div className="newspaper_back">
+                <Image src={"/assets/landing/2.png"} 
+                fill
+                alt=""
+                ></Image>
+        </div>
     </div>
     </section>
 }
