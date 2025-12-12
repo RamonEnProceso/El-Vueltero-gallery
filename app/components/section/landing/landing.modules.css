@@ -48,7 +48,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: drop-shadow(-1px 5px 3px rgba(0, 0, 0, 0.753));
+    filter: drop-shadow(-1px 2px 1px rgba(0, 0, 0, 0.753));
 }
 
 
@@ -134,8 +134,24 @@ h1{
     justify-content: center;
     align-items: center;
 
-    filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.39));
+    filter: drop-shadow(0 4px 1px rgba(0, 0, 0, 0.5));
 }
+
+.judithContainer::after{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35px;
+    z-index: -1;
+    content: "";
+    width: 50%;
+    height: 90px;
+    background-color: black;
+    border-radius: 50%;
+    filter: blur(10);
+    opacity: 0.35;
+}
+
 
 .judithCanvas{
     width: 800px !important;
@@ -146,17 +162,62 @@ h1{
     position: absolute;
     width: 540px;
     height: 600px;
-    z-index: -1;
+    z-index: -2;
     top: 50%;
-    bottom: 50%;
     transform: translate(0,-50%);
     pointer-events: none;
     user-select: none
 }
 
+.newspaper_back.second {
+    height: 450px ;
+    transform: translate(-5%,-65%);
+}
 
+.logo_sticker, .logo_grafitti{
+    position: absolute;
+    z-index: -1;
+    aspect-ratio: 1;
+    width: 190px;
+    top: 50%;
+    transform: translate(280,-40%) rotate(20deg);
+}
 
+.logo_grafitti{
+    top: 50%;
+    width: 200px;
+    transform: translate(-240,-130%) rotate(-15deg);
+}
 
+.esquinas{
+    position: absolute;
+    width: 200px;
+    height: 240px;
+    z-index: -99;
+}
+
+.esquinas.top-left{
+    top: 0;
+    left: 0;
+}
+
+.esquinas.bottom-left{
+    bottom: -20px;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.esquinas.bottom-right{
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.esquinas.top-right{
+    top: -20px;
+    right: 0;
+    transform: rotate(90deg);
+}
 
 
 .newrocker {
@@ -233,14 +294,26 @@ h1{
     .title_landing{
         transform: scale(0.45);
     }
-    .newspaper_back{
-        width: 100%;
-        height: 500px;
-        top: 50%;
-        bottom: 50%;
-        transform: translate(0,-50%);
-    }
+    
     .section_landing{
         overflow: hidden;
+    }
+
+    .logo_sticker, .logo_grafitti{
+        width: 150px;
+        transform: translate(200,-160%) rotate(20deg);
+    }
+
+    .logo_grafitti{
+        transform: translate(-240,-10%) rotate(-15deg);
+    }
+
+    .newspaper_back{
+       width: 400px;
+       height: 500px;
+    }
+
+    .newspaper_back.second{
+        height: 420px;
     }
 }
