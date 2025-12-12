@@ -34,21 +34,66 @@
     justify-content: center;
     align-content: center;
     bottom: 20px;
+    filter: drop-shadow(0 2px 1px #0000008a);
+    opacity: 0;
+
+    transform: translateY(-50px) scale(2);
+    pointer-events: none;
 }
 
-.overlay_icon{
-    transform: rotate(45deg);
-    width: 40px;
-    height: 40px;
-    border: 3px solid white;
-    filter: drop-shadow(3px 3px 0 brown) drop-shadow(-3px -3px 0 brown);
-    background-color: brown;
+.overlay_tape{
+    display: none;
+    pointer-events: none;
+    user-select: none;
+}
 
+.overlay_name{
+    overflow: hidden;
+    height: 25px;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 25px;
+    transition: width 1.3s ;
+    transition-delay: 0.1s;
+    color: black;
+    opacity: 0;
+
+    width: 0;
+}
+
+.overlay_name p{
+    overflow: hidden;
+    font-size: 17px;
+    font-family: monospace;
+    width: 300px;
 }
 
 @media (min-width: 900px) {
+
+    .overlay_tape{
+        display: block;
+    }
+
+    .gallery:hover .gallery_pictures:hover .overlay .overlay_name{
+        width: 100%;
+        opacity: 1;
+    }
+
+    .gallery:hover .gallery_pictures:not(:hover) .overlay .overlay_name{
+        width: 0;
+        opacity: 0;
+    }
+
+    .gallery:hover .gallery_pictures:hover .overlay{
+        opacity: 1;
+        transition: transform 0.3s, opacity 0.25s;
+        transform: translateY(1) scale(1);
+    }
+
     .gallery:hover .gallery_pictures:hover{
         width: 760px;
+        filter: none;
     }
 
     .gallery:hover .gallery_row:hover .gallery_pictures:not(:hover){

@@ -15,13 +15,13 @@ const Landing = () =>{
             <JudithCanvas></JudithCanvas>
         </div>
         <div className="newspaper_back">
-                <Image src={"/assets/landing/1.png"} 
+                <Image src={"/assets/landing/1.webp"} 
                 fill
                 alt=""
                 ></Image>
         </div>
         <div className="newspaper_back">
-                <Image src={"/assets/landing/2.png"} 
+                <Image src={"/assets/landing/2.webp"} 
                 fill
                 alt=""
                 ></Image>
