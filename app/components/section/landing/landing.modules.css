@@ -1,3 +1,7 @@
+:root{
+    --sticker-color: #d1d1d1;
+}
+
 .section_landing{
     display: flex;
     justify-content: center;
@@ -130,7 +134,7 @@ h1{
     justify-content: center;
     align-items: center;
 
-    filter: drop-shadow(4px -4px 0 var(--first-color)) drop-shadow(-4px 4px 0 var(--first-color));
+    filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.39));
 }
 
 .judithCanvas{
