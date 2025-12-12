@@ -18,12 +18,14 @@ const Landing = () =>{
                 <Image src={"/assets/landing/1.webp"} 
                 fill
                 alt=""
+                loading="eager"
                 ></Image>
         </div>
         <div className="newspaper_back">
                 <Image src={"/assets/landing/2.webp"} 
                 fill
                 alt=""
+                loading="eager"
                 ></Image>
         </div>
     </div>
