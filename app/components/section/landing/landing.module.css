@@ -207,24 +207,24 @@
     z-index: -99;
 }
 
-.corner.top-left{
+.corner.top_left{
     top: 0;
     left: 0;
 }
 
-.corner.bottom-left{
+.corner.bottom_left{
     bottom: -20px;
     left: 0;
     transform: rotate(-90deg);
 }
 
-.corner.bottom-right{
+.corner.bottom_right{
     bottom: 0;
     right: 0;
     transform: rotate(180deg);
 }
 
-.corner.top-right{
+.corner.top_right{
     top: -20px;
     right: 0;
     transform: rotate(90deg);

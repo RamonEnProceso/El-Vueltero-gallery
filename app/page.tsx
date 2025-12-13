@@ -1,6 +1,6 @@
-import Gallery from "./components/gallery/gallery";
+import Gallery from "./components/section/gallery/gallery";
 import Landing from "./components/section/landing/landing";
-import Separator from "./components/section/separator/separator";
+import Separator from "./components/section/separator";
 
 export default function Home() {
   return (

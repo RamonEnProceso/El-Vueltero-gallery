@@ -5,6 +5,7 @@ import {Canvas} from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useEffect, Suspense } from "react";
 import { useInView } from "react-intersection-observer";
+import styles from "../landing.module.css"
 
 const JudithModel = () => {
     const {scene, animations} = useGLTF("models/judith.gltf");
@@ -31,7 +32,7 @@ const JudithCanvas = () =>{
     rootMargin: "50px",
   });
 
-    return <div ref={ref} className="judithCanvas">
+    return <div ref={ref} className={styles.judithCanvas}>
     {inView && (<Canvas camera={{ position: [0, 0, 60], fov: 1 }} 
     dpr={[1, 1.5]}
     gl={{ antialias: false, powerPreference: "low-power" }}

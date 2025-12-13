@@ -1,6 +1,6 @@
 "use client"
-import JudithCanvas from "../../models/judith"
-import "./landing.modules.css"
+import JudithCanvas from "./models/judith"
+import styles from "./landing.module.css"
 import Image from "next/image"
 import TitleLanding from "./title"
 import { useInView } from "react-intersection-observer"
@@ -12,8 +12,8 @@ const Landing = () =>{
                 rootMargin: "200px",
         });
 
-        return <section className="section_landing">
-        <div ref={ref} className="landing">
+        return <section className={styles.section_landing}>
+        <div ref={ref} className={styles.landing}>
                 <h1>El Vueltero&apos;s Gallery</h1>
                 {
                 inView && (<>
@@ -21,38 +21,38 @@ const Landing = () =>{
                 <div>
 
                 </div>
-                <div className="judithContainer">
+                <div className={styles.judithContainer}>
                 <JudithCanvas></JudithCanvas>
                 </div>
-                <div className="newspaper_back">
+                <div className={styles.newspaper_back}>
                         <Image src={"/assets/landing/newspaper_1.webp"} 
                         fill
                         alt=""
                         loading="eager"
                         ></Image>
                 </div>
-                <div className="newspaper_back second">
+                <div className={`${styles.newspaper_back} ${styles.second}`}>
                         <Image src={"/assets/landing/tapes.webp"} 
                         fill
                         alt=""
                         loading="eager"
                         ></Image>
                 </div>
-                <div className="logo_sticker">
+                <div className={styles.logo_sticker}>
                         <Image src={"/assets/landing/el_vueltero_sticker.webp"} 
                         fill
                         alt=""
                         loading="eager"
                         ></Image>
                 </div>
-                <div className="logo_grafitti">
+                <div className={styles.logo_grafitti}>
                         <Image src={"/assets/landing/el_vueltero_seal.webp"} 
                         fill
                         alt=""
                         loading="eager"
                         ></Image>
                 </div>
-                <div className="logo_pen left">
+                <div className={`${styles.logo_pen} ${styles.left}`}>
                         <video
                         src={"/assets/landing/el_vueltero_pen.webm#t=0.5"}
                         muted
@@ -65,7 +65,7 @@ const Landing = () =>{
                         }}
                         ></video>
                 </div>
-                <div className="logo_pen right">
+                <div className={`${styles.logo_pen} ${styles.right}`}>
                         <video
                         src={"/assets/landing/el_vueltero_pen.webm"}
                         muted
@@ -78,29 +78,29 @@ const Landing = () =>{
                         }}
                         ></video>
                 </div>
-                <div className="corner_container">
-                        <div className="corner top-left">
+                <div className={styles.corner_container}>
+                        <div className={`${styles.corner} ${styles.top_left}`}>
                                 <Image src={"/assets/landing/corner.webp"} 
                                 fill
                                 alt=""
                                 loading="eager"
                                 ></Image>
                         </div>
-                        <div className="corner bottom-left">
+                        <div className={`${styles.corner} ${styles.bottom_left}`}>
                                 <Image src={"/assets/landing/corner.webp"} 
                                 fill
                                 alt=""
                                 loading="eager"
                                 ></Image>
                         </div>
-                        <div className="corner top-right">
+                        <div className={`${styles.corner} ${styles.top_right}`}>
                                 <Image src={"/assets/landing/corner.webp"} 
                                 fill
                                 alt=""
                                 loading="eager"
                                 ></Image>
                         </div>
-                        <div className="corner bottom-right">
+                        <div className={`${styles.corner} ${styles.bottom_right}`}>
                                 <Image src={"/assets/landing/corner.webp"} 
                                 fill
                                 alt=""
