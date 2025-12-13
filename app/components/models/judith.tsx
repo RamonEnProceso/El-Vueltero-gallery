@@ -3,7 +3,8 @@
 import * as THREE from "three";
 import {Canvas} from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
+import { useInView } from "react-intersection-observer";
 
 const JudithModel = () => {
     const {scene, animations} = useGLTF("models/judith.gltf");
@@ -11,24 +12,38 @@ const JudithModel = () => {
 
     useEffect(()=>{
         const first = Object.values(actions)[0];
+        const second = Object.values(actions)[1];
         if (first) {
             first.play().setLoop(THREE.LoopRepeat, Infinity);
         }
+        if (second) {
+            second.play().setLoop(THREE.LoopRepeat, Infinity);
+        }
     }, [actions])
 
-    return <primitive object={scene} />
+    return <primitive object={scene}/>
 }
 
 const JudithCanvas = () =>{
-    return <div className="judithCanvas">
-    <Canvas camera={{ position: [0, 0, 60], fov: 1 }} 
+
+    const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: "50px",
+  });
+
+    return <div ref={ref} className="judithCanvas">
+    {inView && (<Canvas camera={{ position: [0, 0, 60], fov: 1 }} 
     dpr={[1, 1.5]}
     gl={{ antialias: false, powerPreference: "low-power" }}
-    shadows={false}>
+    shadows={false}
+    frameloop={inView ? "always" : "never"}
+    >
         <ambientLight intensity={1} />
         <directionalLight position={[5, 5, 5]} intensity={3.5} />
+        <Suspense>
         <JudithModel></JudithModel>
-    </Canvas>
+        </Suspense>
+    </Canvas>)}
     </div>
 }
 

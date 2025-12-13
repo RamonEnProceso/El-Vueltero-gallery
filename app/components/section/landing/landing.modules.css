@@ -1,10 +1,8 @@
-:root{
-    --sticker-color: #d1d1d1;
-}
-
 .section_landing{
     display: flex;
     justify-content: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .landing{
@@ -19,19 +17,10 @@
     align-content: center;
 }
 
-h1{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-}
-
 .title_landing{
     position: absolute;
     top: 60vh;
-    z-index: 1;
+    z-index: 8;
     display: flex;
     flex-direction: row;
     margin: 40px 0;
@@ -48,7 +37,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: drop-shadow(-1px 2px 1px rgba(0, 0, 0, 0.753));
+    filter: drop-shadow(-1px 2px 1px #000000c0);
 }
 
 
@@ -133,23 +122,20 @@ h1{
     display: grid;
     justify-content: center;
     align-items: center;
-
-    filter: drop-shadow(0 4px 1px rgba(0, 0, 0, 0.5));
+    z-index: 7;
 }
 
 .judithContainer::after{
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    bottom: 35px;
+    top: 50%;
+    transform: translateX(-50%) translateY(140%);
     z-index: -1;
     content: "";
-    width: 50%;
-    height: 90px;
-    background-color: black;
-    border-radius: 50%;
-    filter: blur(10);
-    opacity: 0.35;
+    width: 600px;
+    height: 200px;
+    background-image: url("/assets/landing/ink_stain.webp");
+    background-size: 100% 100%;
 }
 
 
@@ -162,7 +148,7 @@ h1{
     position: absolute;
     width: 540px;
     height: 600px;
-    z-index: -2;
+    z-index: 0;
     top: 50%;
     transform: translate(0,-50%);
     pointer-events: none;
@@ -176,44 +162,69 @@ h1{
 
 .logo_sticker, .logo_grafitti{
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     aspect-ratio: 1;
     width: 190px;
     top: 50%;
     transform: translate(280,-40%) rotate(20deg);
+    user-select: none;
 }
 
 .logo_grafitti{
     top: 50%;
     width: 200px;
-    transform: translate(-240,-130%) rotate(-15deg);
+    transform: translate(-240,-150%) rotate(-15deg);
 }
 
-.esquinas{
+.logo_pen{
+    position: absolute;
+    z-index: 1;
+}
+
+.logo_pen.right{
+    top: 50%;
+    transform: translateX(320%) translateY(-170%) rotate(20deg);
+}
+
+.logo_pen.left{
+    top: 50%;
+    transform: translateX(-330%) translateY(-30%) rotate(-20deg);
+}
+
+
+
+.corner_container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.corner{
     position: absolute;
     width: 200px;
     height: 240px;
     z-index: -99;
 }
 
-.esquinas.top-left{
+.corner.top-left{
     top: 0;
     left: 0;
 }
 
-.esquinas.bottom-left{
+.corner.bottom-left{
     bottom: -20px;
     left: 0;
     transform: rotate(-90deg);
 }
 
-.esquinas.bottom-right{
+.corner.bottom-right{
     bottom: 0;
     right: 0;
     transform: rotate(180deg);
 }
 
-.esquinas.top-right{
+.corner.top-right{
     top: -20px;
     right: 0;
     transform: rotate(90deg);
@@ -276,23 +287,26 @@ h1{
 @media (max-width: 900px){
     
     html, body{
-        overflow-x: hidden;
         width: 100%;
         max-width: 100%;
     }
 
     .landing{
         position: relative;
-        width: 100vw;
+        width: 100%;
     }
     .judithCanvas{
     width: 600px !important;
     height: 600px !important;
     }
 
+    .judithContainer::after{
+        transform: translateX(-50%) translateY(100%);
+        width: 450px;
+    }
 
     .title_landing{
-        transform: scale(0.45);
+        transform: scale(0.8);
     }
     
     .section_landing{
@@ -301,11 +315,11 @@ h1{
 
     .logo_sticker, .logo_grafitti{
         width: 150px;
-        transform: translate(200,-160%) rotate(20deg);
+        transform: translate(200,-10%) rotate(20deg);
     }
 
     .logo_grafitti{
-        transform: translate(-240,-10%) rotate(-15deg);
+        transform: translate(-200,-160%) rotate(-15deg);
     }
 
     .newspaper_back{
@@ -315,5 +329,51 @@ h1{
 
     .newspaper_back.second{
         height: 420px;
+    }
+
+    .logo_pen.right{
+        transform: translate(250%,-130%) rotate(10deg);
+    }
+
+    .logo_pen.left{
+        transform: translate(-250%,-20%) rotate(-10deg);
+    }
+}
+
+@media (max-width:700px){
+    .title_landing{
+        transform: scale(0.7);
+    }
+    
+}
+
+@media (max-width:600px){
+    .title_landing{
+        transform: scale(0.45);
+    }
+    .logo_sticker, .logo_grafitti{
+        width: 100px;
+        transform: translate(200,-10%) rotate(20deg);
+    }
+
+    .logo_grafitti{
+        transform: translate(-150,-180%) rotate(-15deg);
+    }
+
+    .newspaper_back{
+       width: 400px;
+       height: 500px;
+    }
+
+    .newspaper_back.second{
+        height: 420px;
+    }
+
+    .logo_pen.right{
+        transform: translate(150%,-130%) rotate(10deg);
+    }
+
+    .logo_pen.left{
+        transform: translate(-150%,-20%) rotate(-10deg);
     }
 }

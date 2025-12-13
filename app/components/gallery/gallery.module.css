@@ -1,20 +1,24 @@
 .section_gallery{
     display: flex;
-    justify-content: center
+    justify-content: center;
+    padding: 150px 30px;
+    background-image: linear-gradient(90deg,#00000099 0%, #ffffff00 15%, #ffffff00 85%, #00000099 100%), url("/assets/background/graph_paper.webp");
 }
 
 .gallery{
     width: 950px;
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
-    height: 10vh;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .gallery_row{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
     margin-bottom: 15px;
 }
 
@@ -109,11 +113,15 @@
 @media (max-width: 900px) {
     .gallery{
         width: 100%;
+        height: 100%;
     }
     .gallery_row{
         flex-wrap: wrap;
     }
     .gallery_pictures{
         width: 33.33%;
+    }
+    .section_gallery{
+        overflow: hidden;
     }
 }

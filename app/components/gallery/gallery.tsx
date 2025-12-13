@@ -1,5 +1,5 @@
 import gallery from "../../data/gallery.json"
-import "./gallery.modules.css"
+import styles from "./gallery.module.css"
 import Artwork from "./artwork"
 interface artwork{
     title:string,
@@ -18,14 +18,14 @@ const chunkArray = (arr: artwork[], size:number) => {
     return newArr
 }
 
-const Gallery = async () =>{
+const Gallery = () =>{
 
     const gallerySliced= chunkArray(gallery,6);
 
-    return <section className="section_gallery">
-        <div className="gallery">{
+    return <section className={styles.section_gallery}>
+        <div className={styles.gallery}>{
             gallerySliced.map((part, index) => {
-                return <div className="gallery_row" key={index}>
+                return <div className={styles.gallery_row} key={index}>
                     {part.map((artwork, index)=>{
                         return <Artwork artwork={artwork} key={index}></Artwork>
                         }

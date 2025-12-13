@@ -83,7 +83,7 @@
         "url":"/gallery/edalyn.jpg",
         "description":"Eda from The Owl House fanart",
         "tags":["fanart"],
-        "object-position": "0% 10%"
+        "objectPosition": "0% 10%"
     },
     {
         "title":"Afro girl",
@@ -105,14 +105,15 @@
         "url":"/gallery/chano_tan_bionica_1.jpg",
         "description":"Scene from La melodía de Dios",
         "tags":["argentina","music"],
-        "object-position": "0% 10%"
+        "objectPosition": "0% 10%"
     },
     {
         "title":"Korn fanart",
         "date":"2024-05-04",
         "url":"/gallery/jonathan_davis.jpg",
         "description":"Jonathan Davis Fanart",
-        "tags":["music"]
+        "tags":["music"],
+        "objectPosition": "0% 0%"
     },
     {
         "title":"Grido fanart",
@@ -120,7 +121,7 @@
         "url":"/gallery/super_gridito.jpg",
         "description":"My version of the characters from Super Gridito",
         "tags":["argentina","superhero"],
-        "object-position": "0% 100%"
+        "objectPosition": "0% 100%"
     },
     {
         "title":"Fallout Argentina",
@@ -135,7 +136,7 @@
         "url":"/gallery/deadpool_and_wolverine.jpg",
         "description":"Deadpool & Wolverine fanart",
         "tags":["fanart","superhero"],
-        "object-position": "0% 10%"
+        "objectPosition": "0% 10%"
     },
     {
         "title":"APT",
@@ -157,7 +158,7 @@
         "url":"/gallery/giorno_blue.jpg",
         "description":"Giorno Giovanna from JoJos Bizarre Adventure",
         "tags":["anime","fanart","jojo"],
-        "object-position": "0% 40%"
+        "objectPosition": "0% 40%"
     },
     {
         "title":"The Punkrockers",
@@ -165,7 +166,7 @@
         "url":"/gallery/superman.jpg",
         "description":"Superman, Supergirl and Krypto",
         "tags":["anime","fanart","dc","superhero"],
-        "object-position": "0% 30%"
+        "objectPosition": "0% 30%"
     }
 ]
 

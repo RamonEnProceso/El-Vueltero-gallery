@@ -1,10 +1,4 @@
-import { Permanent_Marker } from "next/font/google";
-
-const permanentMarker = Permanent_Marker({
-    weight: ["400"],
-    subsets: ["latin"],
-    variable: "--font-permanent-marker",
-})
+import styles from "./gallery.module.css"
 
 type Props = {
     text?: string
@@ -20,18 +14,18 @@ const VideoHover = ({src, videoRef} : Props) => {
       muted
       playsInline
       style={{
-        width: "300px",
+        width: "290px",
         height: "auto",
         cursor: "pointer",
       }}
-      className="overlay_tape"
+      className={styles.overlay_tape}
     />
   );
 }
 
 const Overlay = ({text, videoRef} : Props) => {
-    return <div className="overlay">
-        <div className={`overlay_name ${permanentMarker.variable}`}>
+    return <div className={styles.overlay}>
+        <div className={styles.overlay_name}>
           <p>{text}</p>
         </div>
         <VideoHover 

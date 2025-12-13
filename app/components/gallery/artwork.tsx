@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Overlay from "./overlay"
 import { useRef } from "react"
+import styles from "./gallery.module.css"
 
 interface artwork{
     title:string,
@@ -27,7 +28,7 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
         }
     };
 
-    return <div className="gallery_pictures" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+    return <div className={styles.gallery_pictures} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
                 <Overlay text={artwork.title} videoRef={videoRef}></Overlay>
                 <Image 
                     src={artwork.url} 
