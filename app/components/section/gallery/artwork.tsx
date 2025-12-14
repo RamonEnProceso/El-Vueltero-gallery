@@ -28,7 +28,8 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
         }
     };
 
-    return <div className={styles.gallery_pictures} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+    return <div className={styles.gallery_artwork_container} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+    <div className={styles.gallery_artwork}>
                 <Overlay text={artwork.title} videoRef={videoRef}></Overlay>
                 <Image 
                     src={artwork.url} 
@@ -41,6 +42,7 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
                     sizes="20vw"
                 />
             </div>
+    </div>
 }
 
 export default Artwork

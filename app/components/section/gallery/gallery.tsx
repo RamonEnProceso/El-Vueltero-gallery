@@ -20,16 +20,11 @@ const chunkArray = (arr: artwork[], size:number) => {
 
 const Gallery = () =>{
 
-    const gallerySliced= chunkArray(gallery,6);
-
     return <section className={styles.section_gallery}>
         <div className={styles.gallery}>{
-            gallerySliced.map((part, index) => {
-                return <div className={styles.gallery_row} key={index}>
-                    {part.map((artwork, index)=>{
-                        return <Artwork artwork={artwork} key={index}></Artwork>
-                        }
-                    )}
+            gallery.reverse().map((artwork, index) => {
+                return <div key={index}>
+                <Artwork artwork={artwork} key={index}></Artwork>
                 </div>
             })
         }
