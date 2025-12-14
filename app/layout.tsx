@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "El Vueltero's Galley",
   description: 'Galería de dibujos de "El Vueltero" / Ranuuki',
+  icons:{
+    icon:"./favicon.svg"
+  }
 };
 
 export default function RootLayout({

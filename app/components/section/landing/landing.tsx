@@ -17,7 +17,7 @@ const Landing = () =>{
                 <h1>El Vueltero&apos;s Gallery</h1>
                 {
                 inView && (<>
-                <TitleLanding title={"el vueltero"}></TitleLanding>
+                <TitleLanding title={"Ranuuki"}></TitleLanding>
                 <div>
 
                 </div>
