@@ -4,7 +4,7 @@ import styles from "./landing.module.css"
 import Image from "next/image"
 import TitleLanding from "./title"
 import { useInView } from "react-intersection-observer"
-import LandingButtons from "./landingbuttons"
+import { LandingButtons, LandingSocial } from "./landingbuttons"
 
 const Landing = ({onGallery}:{onGallery : () => void}) =>{
 
@@ -15,9 +15,8 @@ const Landing = ({onGallery}:{onGallery : () => void}) =>{
 
         return <section className={styles.section_landing}>
         <TitleLanding title={"el vueltero"}></TitleLanding>
-        <div className={styles.buttonContainer}>
-                <LandingButtons onGallery={onGallery}></LandingButtons>
-        </div>
+        <LandingButtons onGallery={onGallery}></LandingButtons>
+        <LandingSocial></LandingSocial>
         <div ref={ref} className={styles.landing}>
                 <h1>El Vueltero&apos;s Gallery</h1>
                 {

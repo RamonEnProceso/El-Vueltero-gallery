@@ -115,13 +115,13 @@
     user-select: none
 }
 
-.buttonContainer{
+.button_container{
     z-index: 10;
     position: absolute;
     top: 78vh;
 }
 
-.buttonContainer button{
+.button_container button{
     padding: 20px 40px;
     font-size: 18px;
     margin: auto 15px;
@@ -130,7 +130,7 @@
     text-transform: uppercase;
 
     font-weight: bold;
-    border-radius: 15px;
+    border-radius: 0;
     border: 3px solid var(--second-color);
 
     border: none;
@@ -140,6 +140,27 @@
     box-shadow: 0 4px 2px #0000009a;
 }
 
+.social_container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    top: 89vh;
+    z-index: 19;
+}
+
+.social_container a{
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    padding-bottom: -15px;
+    box-shadow: 0 3px 2px #0000009a;
+    height: 50px
+}
+
+.social_container a:first-child{
+    height: 40px;
+}
 
 .judithContainer{
     height: 100vh;
@@ -224,6 +245,7 @@
     height: 100vh;
     overflow: hidden;
     user-select: none;
+    z-index: -1;
 }
 
 .corner{
@@ -311,10 +333,10 @@
 }
 
 @media (min-width: 900px) {
-    .buttonContainer button:hover{
+    .button_container button:hover, .social_container a:hover{
         transform: scale(1.05);
     }
-    .buttonContainer button:active{
+    .button_container button:active{
         transform: scale(0.95);
     }
 }
@@ -396,8 +418,12 @@
         transform: translate(200,-10%) rotate(20deg);
     }
 
-    .buttonContainer{
+    .button_container{
         top: 65vh;
+    }
+
+    .social_container{
+        top:80vh;
     }
 
     .logo_grafitti{
