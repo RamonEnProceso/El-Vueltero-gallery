@@ -4,8 +4,9 @@ import styles from "./landing.module.css"
 import Image from "next/image"
 import TitleLanding from "./title"
 import { useInView } from "react-intersection-observer"
+import LandingButtons from "./landingbuttons"
 
-const Landing = () =>{
+const Landing = ({onGallery}:{onGallery : () => void}) =>{
 
         const { ref, inView } = useInView({
                 triggerOnce: true,
@@ -13,14 +14,14 @@ const Landing = () =>{
         });
 
         return <section className={styles.section_landing}>
+        <TitleLanding title={"el vueltero"}></TitleLanding>
+        <div className={styles.buttonContainer}>
+                <LandingButtons onGallery={onGallery}></LandingButtons>
+        </div>
         <div ref={ref} className={styles.landing}>
                 <h1>El Vueltero&apos;s Gallery</h1>
                 {
                 inView && (<>
-                <TitleLanding title={"Ranuuki"}></TitleLanding>
-                <div>
-
-                </div>
                 <div className={styles.judithContainer}>
                 <JudithCanvas></JudithCanvas>
                 </div>
@@ -78,7 +79,11 @@ const Landing = () =>{
                         }}
                         ></video>
                 </div>
-                <div className={styles.corner_container}>
+                </>
+                )
+                }
+        </div>
+        <div className={styles.corner_container}>
                         <div className={`${styles.corner} ${styles.top_left}`}>
                                 <Image src={"/assets/landing/corner.webp"} 
                                 fill
@@ -108,10 +113,6 @@ const Landing = () =>{
                                 ></Image>
                         </div>
                 </div>
-                </>
-                )
-                }
-        </div>
         </section>
 }
 

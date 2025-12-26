@@ -19,7 +19,7 @@
 
 .title_landing{
     position: absolute;
-    top: 60vh;
+    top: 58vh;
     z-index: 8;
     display: flex;
     flex-direction: row;
@@ -115,6 +115,31 @@
     user-select: none
 }
 
+.buttonContainer{
+    z-index: 10;
+    position: absolute;
+    top: 78vh;
+}
+
+.buttonContainer button{
+    padding: 20px 40px;
+    font-size: 18px;
+    margin: auto 15px;
+    background-color: var(--first-color-darker);
+    color: white;
+    text-transform: uppercase;
+
+    font-weight: bold;
+    border-radius: 15px;
+    border: 3px solid var(--second-color);
+
+    border: none;
+
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 2px #0000009a;
+}
+
 
 .judithContainer{
     height: 100vh;
@@ -198,6 +223,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    user-select: none;
 }
 
 .corner{
@@ -284,6 +310,15 @@
     font-family: Impact;
 }
 
+@media (min-width: 900px) {
+    .buttonContainer button:hover{
+        transform: scale(1.05);
+    }
+    .buttonContainer button:active{
+        transform: scale(0.95);
+    }
+}
+
 @media (max-width: 900px){
     
     html, body{
@@ -296,8 +331,12 @@
         width: 100%;
     }
     .judithCanvas{
-    width: 600px !important;
-    height: 600px !important;
+        width: 600px !important;
+        height: 600px !important;
+    }
+
+    .landing{
+        transform: translateY(-10%);
     }
 
     .judithContainer::after{
@@ -349,11 +388,16 @@
 
 @media (max-width:600px){
     .title_landing{
-        transform: scale(0.45);
+        transform: scale(0.45) translateY(-300%);
     }
+
     .logo_sticker, .logo_grafitti{
         width: 100px;
         transform: translate(200,-10%) rotate(20deg);
+    }
+
+    .buttonContainer{
+        top: 65vh;
     }
 
     .logo_grafitti{
