@@ -1,12 +1,10 @@
 # <img align="center" src="./assets/ElVueltero_Estampilla.webp" height="49px"> El Vueltero's Gallery
 
-<img align="right" src="./assets/photo.webp" height="350px">
-
 **El Vueltero's Gallery** es mi espacio creativo: un portafolio vivo donde conviven ilustraciones, diseños, experimentos estéticos y la evolución de mis habilidades como desarrollador frontend y, en un futuro, full‑stack.
 
 ---
 
-## <img align="center" src="./assets/Krita_logo.webp" height="30px"> ¿Qué es este proyecto?
+## <img align="center" src="./assets/Krita_logo.webp" height="30px"> ¿Qué es este proyecto? <img align="right" src="./assets/photo.webp" height="350px">
 
 Un espacio **exclusivamente artístico** donde voy a centralizar todo lo que produzco para redes y proyectos personales de arte:
 
