@@ -1,10 +1,12 @@
-# El Vueltero's Gallery
+# <img align="center" src="./assets/ElVueltero_Estampilla.webp" height="49px"> El Vueltero's Gallery
+
+<img align="right" src="./assets/photo.webp" height="350px">
 
 **El Vueltero's Gallery** es mi espacio creativo: un portafolio vivo donde conviven ilustraciones, diseños, experimentos estéticos y la evolución de mis habilidades como desarrollador frontend y, en un futuro, full‑stack.
 
 ---
 
-## ✨ ¿Qué es este proyecto?
+## <img align="center" src="./assets/Krita_logo.webp" height="30px"> ¿Qué es este proyecto?
 
 Un espacio **exclusivamente artístico** donde voy a centralizar todo lo que produzco para redes y proyectos personales de arte:
 
@@ -17,53 +19,19 @@ Un espacio **exclusivamente artístico** donde voy a centralizar todo lo que pro
 
 ---
 
-## 🚀 Roadmap
-
-### Fase 1 — Portafolio visual
-
-- Mostrar mis dibujos, diseños y animaciones.
-- Crear una UI limpia, estética y con estilo propio.
-- Componentes React diseñados a mano, sin templates.
-- Agregar animaciones, microinteracciones y efectos CSS avanzados.
-
-### Fase 2 — Profesionalización del sitio
-
-- Agregar un backend (Node.js o similar).
-- Sistema para recibir encargos o trabajos directamente desde la página.
-- Integración de pasarelas de pago (sin exponer datos personales).
-- Panel básico para gestionar pedidos.
-
----
-
-## 🎨 Stack actual
+## 🗃️ Stack actual
 
 - **React**
 - **Next.js**
 - **CSS Modules**
+- **Three.js**
 
 Próximamente:
 
 - **Node.js + Express**
-- **Base de datos (MongoDB / PostgreSQL)**
+- **Base de datos - PostgreSQL**
 - **Autenticación y panel de administración**
 
 ---
 
-## 📁 Estructura (provisoria)
 
-```
-El-vueltero-gallery/
-├── public/
-│   ├── gallery/          # Ilustraciones
-├── app/
-│   ├── components/       # Componentes del sitio
-│   │   ├── gallery/      # Módulo de la galería
-│   ├── data/             # JSON constructores
-└── README.md
-```
-
----
-
-## 🌀 Estado del proyecto
-
-En construcción. Actualizaciones frecuentes.
