@@ -160,6 +160,27 @@
         "description":"Superman, Supergirl and Krypto",
         "tags":["anime","fanart","dc","superhero"],
         "objectPosition": "0% 30%"
+    },
+    {
+        "title":"Betterman",
+        "date":"2026-02-17",
+        "url":"/gallery/betterman.jpg",
+        "description":"Betterman - Robbie Williams",
+        "tags":["fanart","music","movie"]
+    },
+    {
+        "title":"Solid Snake",
+        "date":"2026-03-16",
+        "url":"/gallery/solid_snake.jpg",
+        "description":"Solid Snake - Metal Gear",
+        "tags":["fanart","videogames"]
+    },
+    {
+        "title":"Charly García",
+        "date":"2026-04-30",
+        "url":"/gallery/charly_garcia.jpg",
+        "description":"Charly García",
+        "tags":["fanart","music"]
     }
 ]
 
