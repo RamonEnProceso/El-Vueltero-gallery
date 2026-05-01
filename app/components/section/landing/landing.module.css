@@ -158,9 +158,6 @@
     height: 50px
 }
 
-.social_container a:first-child{
-    height: 40px;
-}
 
 .judithContainer{
     height: 100vh;
@@ -446,4 +443,20 @@
     .logo_pen.left{
         transform: translate(-150%,-20%) rotate(-10deg);
     }
+}
+
+@media (max-height:810px){
+    .title_landing{
+        transform: scale(1) translateY(-50%);
+    }
+
+    .button_container{
+        top: 75vh;
+    }
+
+    .social_container{
+        top:88vh;
+    }
+
+    
 }
