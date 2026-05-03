@@ -1,0 +1,63 @@
+[
+    {
+        "title":"Kalaka fanart",
+        "date":"2022-11-09",
+        "url":"/gallery/psychokalaka_dtiys.jpg",
+        "description":"DTYS Psycho Kalaka",
+        "tags":["fanart"]
+    },
+    {
+        "title":"Judith (OC)",
+        "date":"2023-02-22",
+        "url":"/gallery/judith_oc.jpg",
+        "description":"Judith, an OC from a game I made in 2021",
+        "tags":["OC"]
+    },
+    {
+        "title":"Mc Miku",
+        "date":"2023-03-05",
+        "url":"/gallery/mc_miku.jpg",
+        "description":"Miku McDonald's version",
+        "tags":["fanart"]
+    },
+
+    {
+        "title":"Grido fanart",
+        "date":"2024-05-25",
+        "url":"/gallery/super_gridito.jpg",
+        "description":"My version of the characters from Super Gridito",
+        "tags":["argentina","superhero"],
+        "objectPosition": "0% 100%"
+    },
+    {
+        "title":"Fallout Argentina",
+        "date":"2024-07-04",
+        "url":"/gallery/fallout_buenos_aires.jpg",
+        "description":"What if Fallout games was in Argentina",
+        "tags":["argentina"]
+    },
+    {
+        "title":"Giorno Giovanna",
+        "date":"2025-06-20",
+        "url":"/gallery/giorno_blue.jpg",
+        "description":"Giorno Giovanna from JoJos Bizarre Adventure",
+        "tags":["anime","fanart","jojo"],
+        "objectPosition": "0% 40%"
+    },
+    {
+        "title":"Betterman",
+        "date":"2026-02-17",
+        "url":"/gallery/betterman.jpg",
+        "description":"Betterman - Robbie Williams",
+        "tags":["fanart","music","movie"]
+    },
+    {
+        "title":"Solid Snake",
+        "date":"2026-03-16",
+        "url":"/gallery/solid_snake.jpg",
+        "description":"Solid Snake - Metal Gear",
+        "tags":["fanart","videogames"]
+    }
+]
+
+
