@@ -276,6 +276,23 @@
 }
 
 
+.backgroundSide{
+    position: absolute;
+    width: 310px;
+    height: 100%;
+    z-index: -12;
+}
+
+.backgroundSide.right{
+    right: 0;
+}
+
+.backgroundSide.left{
+    left: 0;
+    transform: scaleX(-100%);
+}
+
+
 .newrocker {
     font-family: var(--font-new-rocker);
     font-size: 50px !important;
@@ -396,6 +413,11 @@
     .logo_pen.left{
         transform: translate(-250%,-20%) rotate(-10deg);
     }
+
+    .backgroundSide{
+        opacity: 0.4;
+    }
+
 }
 
 @media (max-width:700px){
@@ -406,6 +428,8 @@
 }
 
 @media (max-width:600px){
+
+
     .title_landing{
         transform: scale(0.45) translateY(-300%);
     }
