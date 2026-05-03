@@ -15,6 +15,8 @@ const Gallery = ({galleryRef}:{galleryRef:React.RefObject<HTMLElement| null>}) =
             })
         }
         </div>
+        <div className={`${styles.backgroundSide} ${styles.right}`}></div>
+        <div className={`${styles.backgroundSide} ${styles.left}`}></div>
     </section>
 }
 

@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position:relative;
     padding: 50px 30px 150px 30px;
     background-image: linear-gradient(90deg,#00000099 0%, #ffffff00 15%, #ffffff00 85%, #00000099 100%), url("/assets/background/graph_paper.webp");
     overflow-x: hidden;
@@ -16,11 +17,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    
+    z-index: 99;
 }
 
 .gallery_title{
     width: 350px;
     margin-bottom: 50px;
+    z-index: 2;
 }
 
 .gallery_artwork_container{
@@ -102,6 +106,44 @@
     width: 300px;
 }
 
+.backgroundSide{
+    position: absolute;
+    width: 210px;
+    height: 100%;
+    top:0;
+    z-index: 0;
+
+    background-image: url("/assets/gallery/doodle_background.webp");
+    background-size: 100%;
+}
+
+.backgroundSide.right{
+    right: 0;
+}
+
+.backgroundSide.left{
+    left: 0;
+    transform: scaleX(-1);
+}
+
+@media (max-width: 1350px){
+    .backgroundSide{
+        width: 190px;
+    }
+}
+
+@media (max-width: 1200px){
+    .backgroundSide{
+        width: 170px;
+    }
+}
+
+@media (max-width: 1000px){
+    .backgroundSide{
+        width: 150px;
+    }
+}
+
 @media (min-width: 900px) {
 
     .overlay_tape{
@@ -139,6 +181,8 @@
         transform: translate(-50%,-100%) scale(1.3);
         opacity: 0;
     }
+
+    
 }
 
 @media (max-width: 900px) {
@@ -152,6 +196,10 @@
     .gallery_artwork_container{
         padding: 7px;
         padding-bottom: 35px;
+    }
+
+    .backgroundSide{
+        width: 140px;
     }
 }
 
