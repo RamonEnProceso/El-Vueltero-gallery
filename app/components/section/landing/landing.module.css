@@ -278,8 +278,8 @@
 
 .backgroundSide{
     position: absolute;
-    width: 310px;
-    height: 100%;
+    height: 100vh;
+    aspect-ratio: 327/893;
     z-index: -12;
 }
 
@@ -424,7 +424,10 @@
     .title_landing{
         transform: scale(0.7);
     }
-    
+    .judithCanvas{
+        width: 500px !important;
+        height: 500px !important;
+    }
 }
 
 @media (max-width:600px){
@@ -469,9 +472,17 @@
     }
 }
 
+@media (max-width:600px){
+
+    .title_landing{
+        transform: scale(0.4) translateY(-300%);
+    }
+
+}
+
 @media (max-height:810px){
     .title_landing{
-        transform: scale(1) translateY(-50%);
+        transform: scale(0.45) translateY(-50%);
     }
 
     .button_container{
