@@ -114,18 +114,8 @@ const Landing = ({onGallery}:{onGallery : () => void}) =>{
         </div>
 
         <div className={`${styles.backgroundSide} ${styles.right}`}>
-                <Image src={"/assets/landing/background_side.webp"} 
-                fill
-                alt=""
-                loading="eager"
-                ></Image> 
         </div>
         <div className={`${styles.backgroundSide} ${styles.left}`}>
-                <Image src={"/assets/landing/background_side.webp"} 
-                fill
-                alt=""
-                loading="eager"
-                ></Image> 
         </div>
 
         </section>

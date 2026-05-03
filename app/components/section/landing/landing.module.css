@@ -280,6 +280,8 @@
     position: absolute;
     height: 100vh;
     aspect-ratio: 327/893;
+    background-image: url("/assets/landing/background_sideb.webp");
+    background-size: 100%;
     z-index: -12;
 }
 
