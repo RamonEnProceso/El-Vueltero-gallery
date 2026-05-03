@@ -1,4 +1,4 @@
-import gallery from "../../../data/gallery.json"
+import gallery from "../../../data/gallery_render.json"
 import styles from "./gallery.module.css"
 import Artwork from "./artwork"
 import GalleryTitle from "./galleryTitle"
