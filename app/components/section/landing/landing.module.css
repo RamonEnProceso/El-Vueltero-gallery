@@ -494,7 +494,9 @@
     .social_container{
         top:88vh;
     }
+}
 
+@media (max-height:800px) and (min-width: 900px){
     .judithContainer::after{
         display: none;
     }
