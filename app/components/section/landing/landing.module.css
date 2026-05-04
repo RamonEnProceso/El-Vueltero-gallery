@@ -495,5 +495,7 @@
         top:88vh;
     }
 
-    
+    .judithContainer::after{
+        display: none;
+    }
 }
