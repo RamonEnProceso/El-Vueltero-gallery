@@ -32,7 +32,7 @@ const GalleryTitle = () =>{
     return <video
     className={styles.gallery_title}
     ref={videoRef}
-    src={"./assets/gallery/title.webm"}
+    src={"./assets/gallery/tapetitle.webm"}
     muted
     playsInline
     ></video>

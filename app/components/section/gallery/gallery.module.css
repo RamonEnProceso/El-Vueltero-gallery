@@ -22,7 +22,7 @@
 }
 
 .gallery_title{
-    width: 350px;
+    width: 600px;
     margin-bottom: 50px;
     z-index: 2;
 }
@@ -127,6 +127,9 @@
 }
 
 @media (max-width: 1350px){
+    .gallery_title{
+        width: 650px;
+    }
     .backgroundSide{
         width: 190px;
     }
