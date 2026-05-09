@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Overlay from "./overlay"
-import { useRef, useEffect, useState } from "react"
+import { useRef, useState } from "react"
 import styles from "./gallery.module.css"
 
 interface artwork{
@@ -19,11 +19,12 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
     const photoRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
 
-    const [isHover, setHover] = useState(false)
 
     const handleEnter = () => {
         videoRef.current?.play();
-        setHover(true)
+        if(imageRef.current){
+            imageRef.current.style.opacity = "1";
+        }
     };
 
     const handleLeave = () => {
@@ -32,16 +33,15 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
         videoRef.current.currentTime = 0;
         }
         if(photoRef.current){
-            photoRef.current.style.transform = "rotateX(0deg) rotateY(0deg)";
+            photoRef.current.style.setProperty("--rotateX", `0deg`);
+            photoRef.current.style.setProperty("--rotateY", `0deg`);
         }
         if(imageRef.current){
-                    imageRef.current.style.background = ``;
+                    imageRef.current.style.opacity = "0";
         }
-        setHover(false)
     };
 
     const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        if(isHover){
             const rect = e.currentTarget.getBoundingClientRect();
             const mouseX = e.clientX - rect.left;
             const mouseY = e.clientY - rect.top;
@@ -53,12 +53,12 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
             const yPercent = mouseY / rect.height * 100;
 
             if(photoRef.current){
-                photoRef.current.style.transform = `rotateX(${centerY/9}deg) rotateY(${centerX/7}deg) translateY(-5%) scale(1.20)`;
+                photoRef.current.style.setProperty("--rotateX", `${centerY/10}deg`);
+                photoRef.current.style.setProperty("--rotateY", `${centerX/8}deg`);
                 if(imageRef.current){
-                    imageRef.current.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%,#ffffff46,transparent 70%)`;
+                    imageRef.current.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%,#ffffff43,transparent 70%)`;
                 }
             }
-        }
     }
 
     return <div ref={photoRef} className={styles.gallery_artwork_container} onMouseEnter={handleEnter} onMouseLeave={handleLeave} onMouseMove={handleMove}>
