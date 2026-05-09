@@ -17,6 +17,8 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
 
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const photoRef = useRef<HTMLDivElement>(null);
+    const imageRef = useRef<HTMLDivElement>(null);
+
     const [isHover, setHover] = useState(false)
 
     const handleEnter = () => {
@@ -32,7 +34,9 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
         if(photoRef.current){
             photoRef.current.style.transform = "rotateX(0deg) rotateY(0deg)";
         }
-        
+        if(imageRef.current){
+                    imageRef.current.style.background = ``;
+        }
         setHover(false)
     };
 
@@ -44,8 +48,15 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
 
             const centerX = mouseX - rect.width/2;
             const centerY = mouseY - rect.height/2;
+
+            const xPercent = mouseX / rect.width * 100;
+            const yPercent = mouseY / rect.height * 100;
+
             if(photoRef.current){
-                photoRef.current.style.transform = `rotateX(${centerY/6}deg) rotateY(${centerX/5}deg) translateY(-5%) scale(1.20)`;
+                photoRef.current.style.transform = `rotateX(${centerY/9}deg) rotateY(${centerX/7}deg) translateY(-5%) scale(1.20)`;
+                if(imageRef.current){
+                    imageRef.current.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%,#ffffff46,transparent 70%)`;
+                }
             }
         }
     }
@@ -53,6 +64,8 @@ const Artwork = ({artwork} : {artwork : artwork}) =>{
     return <div ref={photoRef} className={styles.gallery_artwork_container} onMouseEnter={handleEnter} onMouseLeave={handleLeave} onMouseMove={handleMove}>
     <div className={styles.gallery_artwork}>
                 <Overlay text={artwork.title} videoRef={videoRef}></Overlay>
+                <div ref={imageRef} className={styles.glare}>
+                </div>
                 <Image 
                     src={artwork.url} 
                     alt={artwork.title} 
