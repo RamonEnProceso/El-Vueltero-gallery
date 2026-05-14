@@ -35,5 +35,11 @@ export const LandingSocial = () =>{
         width={50}
         height={50}
         ></Image></a>
+        <a href="https://github.com/RamonEnProceso" target="_blank"><Image
+        src="./assets/landing/github.webp"
+        alt="X link"
+        width={50}
+        height={50}
+        ></Image></a>
     </div>
 }
